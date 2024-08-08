@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+AR:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=M+PLUS+1+Code:wght@100..700&display=swap" rel="stylesheet">
+    <!--Ending-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/Fav.PNG">
+    <title>Milletly.Web | Facts</title>
+</head>
+<body>
+    <!--Header Section Start-->
+    <header>
+
+    <input type="checkbox" name="" id="toggler">
+    <label for="toggler" class="fas fa-bars"></label>
+
+        <a href="index.html" class="logo">Milletly<span class="ylow">.Web</span></a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="benefits.html">Benefits</a>
+            <a href="facts.html">Facts</a>
+            <a href="culture.html">Culture</a>
+        </nav>
+
+        <div class="icons">
+            <a href="bts.html" class="fa-solid fa-video"></a>
+        </div>
+    </header>
+    <!--Header Section Ends-->
+    <!--About Banner Section-->
+        <section class="sub-header">
+            <h1 class="heading">Amaranth <span class="ylow">Millet</span></h1>
+        </section>
+    <!--About Banner Section Ends-->
+<!-- Facts Section Starts -->
+<!--Facts Section Starts-->
+<section id="facts" class="facts-slider" style="background: linear-gradient(to bottom right, #ff9900cd, #a11818);">
+    <div class="slider-container">
+        <div class="slide active">
+            <div class="facts-box2">
+                <div class="box-top">
+                    <div class="up">
+                        <div class="up-img">
+                            <img src="caroselimgs/Anmar11.jpeg" alt="">
+                        </div>
+                        <div class="fact-h">
+                            <strong>Benefit 1</strong>
+                        </div>
+                    </div>
+                    <div class="txt"></div>
+                </div>
+                <div class="fact-para">
+                    <p>Amaranth millet is rich in protein, fiber, and essential nutrients like iron, magnesium, and calcium. Its high protein content supports muscle health and repair, while its fiber aids digestion and helps regulate blood sugar levels, making it beneficial for diabetes management.</p>
+                </div>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="facts-box2">
+                <div class="box-top">
+                    <div class="up">
+                        <div class="up-img">
+                            <img src="caroselimgs/Amar2.jpeg" alt="">
+                        </div>
+                        <div class="fact-h">
+                            <strong>Benefit 2</strong>
+                        </div>
+                    </div>
+                    <div class="txt"></div>
+                </div>
+                <div class="fact-para">
+                    <p>The antioxidants in amaranth millet help combat oxidative stress and lower the risk of chronic diseases. Its anti-inflammatory properties contribute to overall health and can alleviate inflammation-related conditions. Regular consumption supports cardiovascular health by reducing cholesterol levels and maintaining healthy blood pressure.</p>
+                </div>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="facts-box2">
+                <div class="box-top">
+                    <div class="up">
+                        <div class="up-img">
+                            <img src="caroselimgs/Amar3.jpeg" alt="">
+                        </div>
+                        <div class="fact-h">
+                            <strong>Benefit 3</strong>
+                        </div>
+                    </div>
+                    <div class="txt"></div>
+                </div>
+                <div class="fact-para">
+                    <p>Gluten-free, amaranth millet is suitable for those with gluten intolerance or celiac disease. It is versatile and can be used in various dishes, from traditional porridges to modern salads and baked goods, enhancing nutritional value and supporting a balanced diet.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="prev" onclick="moveSlide(-1)">❮</button>
+    <button class="next" onclick="moveSlide(1)">❯</button>
+    <a href="benefits.html" class="btn">Back to Benefits</a>
+</section>
+<!-- Facts Section Ends -->
+    <script>
+    let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+
+function showSlide(index) {
+    if (index >= slides.length) {
+        currentSlide = 0;
+    } else if (index < 0) {
+        currentSlide = slides.length - 1;
+    } else {
+        currentSlide = index;
+    }
+    const offset = -currentSlide * 100;
+    document.querySelector('.slider-container').style.transform = `translateX(${offset}%)`;
+}
+
+function moveSlide(direction) {
+    showSlide(currentSlide + direction);
+}
+    </script>
+    <!--Facts Section Ends-->
+    <!--Footer Section Starts-->
+    <section class="footer">
+        <h1 class="foottxt">Milletly.Web | <span>© </span>Copyright 2024-25</h1>
+   </section>
+        </body>
+    </html>
+    
